@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <script>
+        let tab,i,j;
+        let width = +prompt('Nhập chiều dài: ');
+        let height = +prompt('Nhập chiều rộng: ');
+        let print_chart = prompt('Nhập ký tự mà bạn muốn ra ');
+        i  = 1;
+        tab = "<table>";
+        while (i<=height){
+            tab += "<tr>";
+                j=1;
+            while(j <= width){
+                if (((j > 1 ) && (j < width)) && ((i > 1 ) && (i < height))) {
+                    tab = tab + "<td>" + " " + "</td>";    
+                } else {
+                    tab = tab + "<td>" + print_chart + "</td>";
+                }
+                
+                j++;
+            } 
+            
+            i++;
+        }
+        tab = tab + "</table>";
+        document.write(tab);
+    </script>    
+</body>
+</html>
