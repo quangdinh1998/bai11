@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+        <script>
+            let num1 = 0;
+            let num2 = 1;
+            let count=2;
+            while(num2 % 5 !== 0){
+                num2 +=num1;
+                num1 = num2 - num1;
+                count++;
+            }
+            document.write( 'Số đầu tiên chia hết cho 5: ' + num2 + '<br/>' + 'Nó là phần tử thứ ' + count);
+           
+        </script>
+</body>
+</html>
