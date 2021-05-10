@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+      <h1>Welcome to game Hãy Thử Đoán Xem</h1> <br/>
+      <button type="button" onclick="play()">Chơi</button>
+
+</body>
+</html>
+<script>
+    
+    function play() {
+        let startNum,endNum,guessNum,randomNum;
+        startNum = parseInt(prompt('Nhập số đầu tiên của dãy'));
+        endNum = parseInt(prompt('Nhập số cuối cùng của dãy'));
+        guessNum = parseInt(prompt('Bạn đoán là số mấy trong dãy'));
+        randomNum = Math.floor(Math.random() * (endNum - startNum) + startNum);
+        if (guessNum === randomNum) {
+            alert('You win, press OK to quit');
+        }
+        else { 
+            let count = 2;
+            while (count <= 3 ){
+                if (guessNum < randomNum) {
+                    guessNum = parseInt(prompt('Số bạn đoán nhỏ hơn rồi, chọn lại nhé:'));
+         }      else {
+                    guessNum = parseInt(prompt('Số bạn đoán lớn hơn rồi, chọn lại nhé:'));
+         }
+            count++;
+            }
+        alert('You lose!!');
+        }
+    }
+</script>
